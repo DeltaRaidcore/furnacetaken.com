@@ -107,6 +107,10 @@
 		background-image: url("img/dungeons.png");
 	}
 
+	#maintenance {
+		background-image: url("img/maintenance.png");
+	}
+
 	#drms {
 		background-image: url("img/drms.png");
 	}
@@ -330,7 +334,7 @@
 		</div>
 	</div>-->
 	<div class="big-row" id="schedule">
-		<div id="content-drops-wrapper">
+		<!--<div id="content-drops-wrapper">
 			<div class="content-drop">
 				<h1>Update 1</h1>
 				<h2>January, 2026</h2>
@@ -360,7 +364,7 @@
 			<div class="content-drop">
 				<h1>Update 3</h1>
 				<h2>September, 2026</h2>
-				<span id="q3-countdown"><span><h3 class="Timer"><!--Released--></h3></span></span>
+				<span id="q3-countdown"><span><h3 class="Timer">Released</h3></span></span>
 				<ul>
 					<li>Story Concludes</li>
 					<li>Map 4</li>
@@ -375,10 +379,17 @@
 				</ul>
 			</div>
 		</div>
-		<hr width="80%">
+		<hr width="80%">-->
 		<div id="timeline"></div>
 	</div>
 	
+	<div class="row" id="maintenance">
+		<div class="content">
+			<h2>Maintenance Mode</h2>
+			<h4>Days since</h4>
+			<div class="Timer"></div>
+		</div>
+	</div>
 	<div class="row" id="alliances">
 		<div class="content">
 			<h2>Time since Alliances were announced</h2>
@@ -416,6 +427,7 @@
 	<div class="row" id="gw3-cd">
 		<div class="content">
 			<h2>Guild Wars 3 Beta</h2>
+			<h4>Days until</h4>
 			<div class="Timer"></div>
 		</div>
 	</div>
@@ -473,6 +485,7 @@
 			case "raids": startCD(timers[i], new Date("mar 11, 2025 17:00:00").getTime()); break;
 			case "balance-patch": startCD(timers[i], new Date("jun 24, 2025 17:00:00").getTime()); break;
 			case "strikes": startCD(timers[i], new Date("feb 27, 2024 17:00:00").getTime()); break;
+			case "maintenance": startCD(timers[i], new Date("oct 13, 2026 17:00:00").getTime()); break;
 			case "alliances": startCD(timers[i], new Date("feb 1, 2018 17:00:00").getTime()); break;
 			case "dungeons": startCD(timers[i], new Date("jun 25, 2013 17:00:00").getTime()); break;
 			case "drms": startCD(timers[i], new Date("mar 9, 2021 17:00:00").getTime()); break;
@@ -720,9 +733,22 @@
 							x: "Era",
 							y: [
 								new Date("2025-10-28").getTime(),
-								Date.now(),
+								new Date("2026-10-13").getTime(),
 							],
 							strokeColor: '#EF70FF'
+						}
+					]
+				},
+				{
+					name: "Maintenance",
+					data: [
+						{
+							x: "Era",
+							y: [
+								new Date("2026-10-13").getTime(),
+								Date.now(),
+							],
+							strokeColor: '#808080'
 						}
 					]
 				},
@@ -1050,6 +1076,18 @@
 							y: [
 								new Date("2025-06-03").getTime(),
 								new Date("2025-06-04").getTime()
+							]
+						}
+					]
+				},
+				{
+					name: "Solitary Throne",
+					data: [
+						{
+							x: "Fractals",
+							y: [
+								new Date("2026-09-15").getTime(),
+								new Date("2026-09-16").getTime()
 							]
 						}
 					]
@@ -1462,6 +1500,54 @@
 							y: [
 								new Date("2026-02-03").getTime(),
 								new Date("2026-02-04").getTime()
+							]
+						}
+					]
+				},
+				{
+					name: "Guardian's Glade CM",
+					data: [
+						{
+							x: "Encounters",
+							y: [
+								new Date("2026-02-24").getTime(),
+								new Date("2026-02-25").getTime()
+							]
+						}
+					]
+				},
+				{
+					name: "Nexus of Eternity",
+					data: [
+						{
+							x: "Encounters",
+							y: [
+								new Date("2026-09-15").getTime(),
+								new Date("2026-09-16").getTime()
+							]
+						}
+					]
+				},
+				{
+					name: "Nexus of Eternity CM",
+					data: [
+						{
+							x: "Encounters",
+							y: [
+								new Date("2026-09-29").getTime(),
+								new Date("2026-09-30").getTime()
+							]
+						}
+					]
+				},
+				{
+					name: "Nexus of Eternity LCM",
+					data: [
+						{
+							x: "Encounters",
+							y: [
+								new Date("2026-10-13").getTime(),
+								new Date("2026-10-14").getTime()
 							]
 						}
 					]
